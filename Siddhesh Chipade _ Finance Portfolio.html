@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Siddhesh Chipade | Finance Graduate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f5f9;--fg:#101a33;--muted:#55607a;--card:#ffffff;--line:#d9dfec;--accent:#0c8c7c;--gold:#b98a1f;
+  --ink:#0b1630;--ink2:#14244a;--mist:#e8edf8;--jade:#3fd1b9;--brass:#e3b955;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1226;--fg:#e8edf8;--muted:#9aa6c4;--card:#111d3a;--line:#223259;--accent:#3fd1b9;--gold:#e3b955}}
+:root[data-theme="dark"]{--bg:#0a1226;--fg:#e8edf8;--muted:#9aa6c4;--card:#111d3a;--line:#223259;--accent:#3fd1b9;--gold:#e3b955}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;color:var(--mist);min-height:min(92vh,820px);display:flex;flex-direction:column;justify-content:flex-end;
+  background:radial-gradient(120% 90% at 85% 10%,#1d3a7a 0%,transparent 55%),linear-gradient(180deg,var(--ink2),var(--ink))}
+.chart{position:absolute;inset:auto 0 0 0;width:100%;height:68%;pointer-events:none}
+.candle{transform-box:fill-box;transform-origin:50% 100%;animation:grow .7s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*55ms + .2s)}
+@keyframes grow{from{transform:scaleY(0);opacity:0}to{transform:scaleY(1);opacity:1}}
+.trend{stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 2.2s .5s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.tag{position:absolute;right:6%;top:30%;font:600 .8rem var(--sans);color:var(--brass);text-align:right;opacity:0;animation:fade .8s 2.4s forwards}
+.tag b{display:block;font:600 2.4rem/1 var(--serif);color:#fff}
+@keyframes fade{to{opacity:1}}
+.hero .wrap{position:relative;padding:7rem 0 4.5rem}
+.hero h1{font:600 clamp(2.8rem,9vw,6.4rem)/.98 var(--serif);letter-spacing:-.025em;margin:0 0 1.4rem;color:#fff;font-variation-settings:"opsz" 144}
+.hero p.lead{max-width:34rem;font-size:clamp(1.05rem,2.2vw,1.3rem);color:#c9d3ec;margin:0 0 2rem}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid rgba(255,255,255,.3);color:#fff;transition:background .2s,border-color .2s}
+.btn:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.btn.main{background:var(--jade);border-color:var(--jade);color:#06231e}
+.btn.main:hover{background:#6fe2cf;border-color:#6fe2cf}
+
+/* SECTIONS */
+section{padding:5.5rem 0}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.2fr);gap:2.5rem 4rem}
+h2{font:600 clamp(1.7rem,3.4vw,2.3rem)/1.15 var(--serif);letter-spacing:-.01em;margin:0}
+.side p{color:var(--muted);margin:.7rem 0 0;font-size:.98rem;max-width:20rem}
+.about p{font:400 clamp(1.2rem,2.4vw,1.55rem)/1.55 var(--serif);margin:0;max-width:44rem}
+.about em{font-style:italic;color:var(--accent)}
+
+/* Experience timeline (a true sequence) */
+.tl{list-style:none;margin:0;padding:0 0 0 1.6rem;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 2.6rem}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:calc(-1.6rem - 7px);top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl li:first-child::before{background:var(--accent)}
+.when{font-size:.85rem;font-weight:600;color:var(--gold);margin-bottom:.15rem}
+.tl h3{font:600 1.35rem/1.3 var(--serif);margin:0}
+.org{color:var(--muted);margin:.1rem 0 .7rem;font-size:.98rem}
+.tl ul{margin:0;padding-left:1.1rem;color:var(--muted);font-size:.98rem}
+.tl ul li{padding:0;margin:.25rem 0;border:0;position:static}
+.tl ul li::before{display:none}
+
+/* Education */
+.edu{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.edu article{background:var(--card);padding:1.6rem 1.8rem;display:grid;grid-template-columns:1fr auto;gap:.3rem 1.5rem;align-items:baseline}
+.edu article:first-child{padding:2rem 1.8rem}
+.edu h3{font:600 1.2rem/1.35 var(--serif);margin:0}
+.edu article:first-child h3{font-size:1.5rem}
+.edu p{margin:0;color:var(--muted);font-size:.95rem;grid-column:1}
+.edu time{grid-row:1;grid-column:2;font-weight:600;font-size:.9rem;color:var(--gold);white-space:nowrap}
+.score{display:inline-block;margin-top:.6rem;padding:.3rem .8rem;border-radius:999px;background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent);font-weight:600;font-size:.9rem}
+
+/* Research & leadership */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.8rem}
+.panel h3{font:600 1.25rem var(--serif);margin:0 0 1rem}
+.panel ul{margin:0;padding:0;list-style:none}
+.panel li{padding:.8rem 0;border-top:1px solid var(--line);font-size:.98rem}
+.panel li:first-child{border-top:0;padding-top:0}
+.panel li small{display:block;color:var(--muted);font-size:.85rem}
+
+/* Skills */
+.skills{display:grid;gap:1.6rem}
+.skills h3{font:600 1rem var(--sans);margin:0 0 .6rem;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
+.chips li{padding:.45rem .95rem;border:1px solid var(--line);background:var(--card);border-radius:999px;font-size:.92rem;font-weight:500}
+
+/* Contact */
+footer{background:linear-gradient(180deg,var(--ink2),var(--ink));color:var(--mist);padding:5rem 0 3rem}
+footer h2{color:#fff;font-size:clamp(2rem,5vw,3.2rem);max-width:30rem;margin-bottom:2rem}
+.contact{display:grid;gap:.4rem;font-size:1.1rem;margin-bottom:2.5rem}
+.contact a{text-decoration:none;width:fit-content;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:1px}
+.contact a:hover{border-color:var(--jade);color:var(--jade)}
+.contact span{color:#9aa6c4;font-size:.95rem}
+.fine{color:#7f8cad;font-size:.85rem;margin:0}
+
+@media (max-width:780px){
+  section{padding:3.8rem 0}
+  .grid,.two{grid-template-columns:1fr}
+  .tag{top:18%;right:5%}
+  .edu article{grid-template-columns:1fr}
+  .edu time{grid-row:auto;grid-column:1}
+  .hero .wrap{padding-top:5rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .candle,.trend,.tag{animation:none;opacity:1;stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="chart" id="chart" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+  <div class="tag"><b>9.43</b>CGPA, graduated with distinction</div>
+  <div class="wrap">
+    <h1>Siddhesh<br>Chipade</h1>
+    <p class="lead">Finance graduate from the University of Mumbai, building a career in investment banking and corporate finance. Next step: MSc Finance at Aston University.</p>
+    <div class="cta">
+      <a class="btn main" href="#contact">Get in touch</a>
+      <a class="btn" href="#experience">See experience</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <div class="wrap grid">
+    <div class="side"><h2>About</h2></div>
+    <div class="about">
+      <p>I study how capital moves: through <em>capital markets</em>, corporate finance and investment analysis. I have worked in debt investment banking, equity research and capital market analysis, and I want to deepen the quantitative side of finance and take it to a global stage.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="padding-top:0">
+  <div class="wrap grid">
+    <div class="side"><h2>Experience</h2><p>Four internships across debt, equity and capital markets, newest first.</p></div>
+    <ol class="tl">
+      <li>
+        <div class="when">3 June to 3 August 2025</div>
+        <h3>Debt Investment Banker (Intern)</h3>
+        <div class="org">Zetheta Algorithms Private Limited</div>
+        <ul>
+          <li>Hands-on exposure to debt investment banking across multiple functional areas.</li>
+          <li>Sharpened presentation and communication skills.</li>
+          <li>Learned how AI applications are used in finance.</li>
+        </ul>
+      </li>
+      <li>
+        <div class="when">March 2025</div>
+        <h3>Capital Market Analyst (Intern)</h3>
+        <div class="org">Pip Raisers, Bangalore</div>
+        <ul>
+          <li>Researched capital market trends and financial instruments.</li>
+          <li>Helped develop investment strategies and trading plans.</li>
+          <li>Contributed to research projects and client presentations.</li>
+          <li>Joined mentorship sessions on careers and industry insight.</li>
+        </ul>
+      </li>
+      <li>
+        <div class="when">March 2025</div>
+        <h3>Equity Research Analyst (Intern)</h3>
+        <div class="org">Gravitas Masters</div>
+      </li>
+      <li>
+        <div class="when">2 May to 20 June 2023</div>
+        <h3>Financial Analyst (Intern)</h3>
+        <div class="org">Margin Sentiment Advisory Private Limited, Bangalore</div>
+        <ul>
+          <li>Advised assigned clients on market direction using technical analysis of stocks, for intraday and swing trading.</li>
+          <li>Prepared reports comparing the risk and reward of each strategy.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="education" style="padding-top:0">
+  <div class="wrap grid">
+    <div class="side"><h2>Education</h2></div>
+    <div class="edu">
+      <article>
+        <h3>Bachelor of Management Studies in Capital Markets</h3>
+        <time>June 2024</time>
+        <p>SIES College of Arts, Science and Commerce (Autonomous), Sion (West), Mumbai. Affiliated to the University of Mumbai.</p>
+        <span class="score">9.43 CGPA</span>
+      </article>
+      <article>
+        <h3>Grade XII: Business Studies, Accountancy, Economics, Mathematics</h3>
+        <time>July 2020</time>
+        <p>Smt. Sulochanadevi Singhania School, Thane West. CISCE Board.</p>
+      </article>
+      <article>
+        <h3>Grade X</h3>
+        <time>May 2018</time>
+        <p>Smt. Sulochanadevi Singhania School, Thane West. CISCE Board.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="research" style="padding-top:0">
+  <div class="wrap grid">
+    <div class="side"><h2>Research and leadership</h2></div>
+    <div class="two">
+      <div class="panel">
+        <h3>Research projects</h3>
+        <ul>
+          <li>Reverse mortgage loans in the Mumbai region<small>Final year dissertation</small></li>
+          <li>Premiumization of consumer demand<small>Academic year, March 2023</small></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Leadership</h3>
+        <ul>
+          <li>Finance Head, SIES BMS Association<small>2023 to 2024</small></li>
+          <li>Joint Secretary, SIES Club for Financial Research and Education<small>2021 to 2022</small></li>
+          <li>Research Analyst and core committee member, college Finance Club</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="padding-top:0">
+  <div class="wrap grid">
+    <div class="side"><h2>Skills and certifications</h2></div>
+    <div class="skills">
+      <div><h3>Technical</h3><ul class="chips"><li>MS PowerPoint</li><li>MS Excel</li><li>C and C++</li></ul></div>
+      <div><h3>Professional</h3><ul class="chips"><li>Analytical skills</li><li>Research</li><li>Communication</li><li>Marketing</li><li>Leadership</li><li>Strategic thinking</li><li>Training and mentorship</li></ul></div>
+      <div><h3>Certifications</h3><ul class="chips"><li>Bloomberg Market Concepts</li><li>Bloomberg ESG</li><li>Financial Modelling and Valuation</li><li>Python for Finance</li><li>Advanced MS Excel</li><li>Smart Tally ERP 9</li><li>C and C++</li><li>MS-CIT</li></ul></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let’s talk about finance, markets and what comes next.</h2>
+    <div class="contact">
+      <a href="mailto:sidhu.chipade@gmail.com">sidhu.chipade@gmail.com</a>
+      <a href="tel:+918976183285">+91 8976183285</a>
+      <a href="https://www.linkedin.com/in/siddhesh-chipade-8560bb201" target="_blank" rel="noopener">linkedin.com/in/siddhesh-chipade-8560bb201</a>
+      <span>Thane (West), Maharashtra, India</span>
+    </div>
+    <p class="fine">© 2026 Siddhesh Chipade</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var svg=document.getElementById('chart'),NS='http://www.w3.org/2000/svg',n=30,w=1200,h=420,step=w/n,seed=7;
+  function r(){seed=(seed*9301+49297)%233280;return seed/233280}
+  function el(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e}
+  var prev=330,pts=[];
+  for(var i=0;i<n;i++){
+    var target=330-i*(250/n)+Math.sin(i*.7)*18;
+    var open=prev,close=target+(r()-.5)*40;
+    var hi=Math.min(open,close)-r()*22-6,lo=Math.max(open,close)+r()*22+6;
+    var up=close<open,x=i*step+step/2,col=up?'#3fd1b9':'#e3b955';
+    var g=el('g',{'class':'candle',style:'--i:'+i});
+    g.appendChild(el('line',{x1:x,x2:x,y1:hi,y2:lo,stroke:col,'stroke-width':2,opacity:.55}));
+    g.appendChild(el('rect',{x:x-step*.28,width:step*.56,y:Math.min(open,close),height:Math.max(4,Math.abs(open-close)),fill:col,opacity:.38,rx:2}));
+    svg.appendChild(g);pts.push(x+','+((open+close)/2).toFixed(1));prev=close;
+  }
+  svg.appendChild(el('polyline',{'class':'trend',points:pts.join(' '),fill:'none',stroke:'#fff','stroke-width':2.5,'stroke-linejoin':'round',opacity:.8}));
+})();
+</script>
+</body>
+</html>
